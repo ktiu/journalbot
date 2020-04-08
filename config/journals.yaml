@@ -1,0 +1,324 @@
+- name: Geographische Zeitschrift
+  format: ingenta
+  feedURL: https://api.ingentaconnect.com/content/fsv/gz/latest?format=rss
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Social Anthropology
+  format: wiley
+  feedURL: https://onlinelibrary.wiley.com/feed/14698676/most-recent
+  channels:
+    - journals-kulturanthropologie
+
+- name: Area
+  format: wiley
+  feedURL: https://rgs-ibg.onlinelibrary.wiley.com/action/showFeed?jc=14754762&type=etoc&feed=rss
+  channels:
+    - journals-angewandtes
+    - journals-gis
+
+- name: International Journal of Urban and Regional Research
+  feedURL: https://onlinelibrary.wiley.com/feed/14682427/most-recent
+  format: wiley
+  channels:
+    - journals-angewandtes
+    - journals-stadtforschung
+
+- name: The Professional Geographer
+  feedURL: https://www.tandfonline.com/feed/rss/rtpg20
+  format: tandf
+  channels:
+    - journals-gis
+    - journals-angewandtes
+    - journals-digitales
+
+- name: Antipode
+  feedURL: https://onlinelibrary.wiley.com/feed/14678330/most-recent
+  format: wiley
+  channels:
+    - journals-stadtforschung
+    - journals-globaler-suden
+    - journals-politische-geographie
+
+- name: Urban Geography
+  feedURL: https://www.tandfonline.com/feed/rss/rurb20
+  format: tandf
+  channels:
+    - journals-stadtforschung
+
+- name: Third World Quarterly
+  feedURL: https://www.tandfonline.com/feed/rss/ctwq20
+  format: tandf
+  channels:
+    - journals-globaler-suden
+
+- name: Development and Change
+  format: wiley
+  feedURL: https://onlinelibrary.wiley.com/feed/14677660/most-recent
+  channels:
+    - journals-globaler-suden
+
+- name: Singapore Journal of Tropical Geography
+  format: wiley
+  feedURL: https://onlinelibrary.wiley.com/feed/14679493/most-recent
+  channels:
+    - journals-globaler-suden
+
+- name: Journal of Development Studies
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/fjds20
+  channels:
+    - journals-globaler-suden
+    - journals-wirtschaftsgeographie
+
+- name: African Geographical Review
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rafg20
+  channels:
+    - journals-globaler-suden
+
+- name: Mobilities
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rmob20
+  channels:
+    - journals-mobilitat
+
+- name: Globalizations
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rglo20
+  channels:
+    - journals-migration
+    - journals-wirtschaftsgeographie
+    - journals-politische-geographie
+
+- name: Journal of Borderlands Studies
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rjbs20
+  channels:
+    - journals-migration
+
+- name: Territory, Politics, Governance
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rtep20
+  channels:
+    - journals-migration
+    - journals-politische-geographie
+
+- name: Journal of Transport Geography
+  format: sciencedirect
+  feedURL: http://rss.sciencedirect.com/publication/science/09666923
+  channels:
+    - journals-migration
+    - journals-mobilitat
+  iconURL: https://ars.els-cdn.com/content/image/X09666923.jpg
+
+- name: Economy and Society
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/reso20
+  channels:
+    - journals-wirtschaftsgeographie
+
+- name: Environment and Planning A
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=epna&type=etoc&feed=rss
+  channels:
+    - journals-wirtschaftsgeographie
+
+- name: Journal of Cultural Economy
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rjce20
+  channels:
+    - journals-wirtschaftsgeographie
+
+- name: New Political Economy
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/cnpe20
+  channels:
+    - journals-wirtschaftsgeographie
+
+- name: Rethinking Marxism
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rrmx20
+  channels:
+    - journals-wirtschaftsgeographie
+    - journals-theorie
+
+- name: Economic Geography
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/recg20
+  channels:
+    - journals-wirtschaftsgeographie
+
+- name: Global Networks
+  format: wiley
+  feedURL: https://onlinelibrary.wiley.com/feed/14710374/most-recent
+  channels:
+    - journals-wirtschaftsgeographie
+
+- name: Review of International Political Economy
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rrip20
+  channels:
+    - journals-wirtschaftsgeographie
+
+- name: Critical Military Studies
+  feedURL: https://www.tandfonline.com/feed/rss/rcms20
+  format: tandf
+  channels:
+    - journals-security
+
+- name: Security Dialogue
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=sdib&type=etoc&feed=rss
+  channels:
+    - journals-security
+    - journals-politische-geographie
+
+- name: Cartography and Geographic Information Science
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/tcag20
+  channels:
+    - journals-gis
+    - journals-digitales
+
+- name: Big Data & Society
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=bdsa&type=etoc&feed=rss
+  channels:
+    - journals-digitales
+
+- name: Social Studies of Science
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=sssb&type=etoc&feed=rss
+  channels:
+    - journals-sts
+
+- name: Theory, Culture & Society
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=tcsa&type=etoc&feed=rss
+  channels:
+    - journals-theorie
+
+- name: Distinktion
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rdis20
+  channels:
+    - journals-theorie
+
+- name: Progress in Human Geography
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=phgb&type=etoc&feed=rss
+  channels:
+    - journals-humangeographie-allgemein
+    - journals-theorie
+
+- name: European Journal of Social Theory
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=esta&type=etoc&feed=rss
+  channels:
+    - journals-theorie
+
+- name: Environment and Planning E
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=enea&type=etoc&feed=rss
+  channels:
+    - journals-okologie
+
+- name: Environment and Planning C
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=epcb&type=etoc&feed=rss
+  channels:
+    - journals-politische-geographie
+
+- name: Geopolitics
+  format: tandf
+  feedURL: 'https://www.tandfonline.com/feed/rss/fgeo20'
+  channels:
+    - journals-politische-geographie
+
+- name: Political Geography
+  format: sciencedirect
+  feedURL: 'http://rss.sciencedirect.com/publication/science/09626298'
+  channels:
+    - journals-politische-geographie
+  iconURL: https://ars.els-cdn.com/content/image/X09626298.jpg
+
+- name: Cultural Geographies
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=cgjb&type=etoc&feed=rss
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: The Geographical Journal
+  format: wiley
+  feedURL:  https://rgs-ibg.onlinelibrary.wiley.com/action/showFeed?jc=14754959&type=etoc&feed=rss
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Dialogues in Human Geography
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=dhga&type=etoc&feed=rss
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Transactions of the Institute of British Geographers
+  format: wiley
+  feedURL: https://rgs-ibg.onlinelibrary.wiley.com/action/showFeed?jc=14755661&type=etoc&feed=rss
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Environment and Planning D
+  format: sage
+  feedURL: https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=epda&type=etoc&feed=rss
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Geographica Helvetica
+  format: helv
+  iconURL: https://www.geographica-helvetica.net/graphic_gh_cover.jpg
+  feedURL: https://www.geogr-helv.net/xml/rss2_0.xml
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Social & Cultural Geography
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rscg20
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Tijdschrift voor economische en sociale geografie
+  format: wiley
+  feedURL: https://onlinelibrary.wiley.com/feed/14679663/most-recent
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Geografiska Annaler
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rgab20
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Geographical Review
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/utgr20
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Geography Compass
+  format: wiley
+  feedURL: https://onlinelibrary.wiley.com/feed/17498198/most-recent
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Geoforum
+  iconURL: https://ars.els-cdn.com/content/image/X00167185.jpg
+  format: sciencedirect
+  feedURL: http://rss.sciencedirect.com/publication/science/00167185
+  channels:
+    - journals-humangeographie-allgemein
+
+- name: Annals of the American Association of Geographers
+  format: tandf
+  feedURL: 'https://www.tandfonline.com/feed/rss/raag21'
+  channels:
+    - journals-humangeographie-allgemein

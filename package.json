@@ -1,0 +1,21 @@
+{
+  "name": "journals-matter",
+  "version": "1.0.0",
+  "description": "Pulls new articles from journals and posts them into mattermost",
+  "main": "checkFeeds.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Till Straube",
+  "license": "ISC",
+  "dependencies": {
+    "async-cache": "^1.1.0",
+    "cheerio": "^1.0.0-rc.3",
+    "data-store": "^4.0.3",
+    "express": "^4.17.1",
+    "got": "^10.7.0",
+    "request": "^2.88.2",
+    "xml2js": "^0.4.23",
+    "yaml": "^1.8.3"
+  }
+}

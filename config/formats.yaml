@@ -1,0 +1,145 @@
+tandf:
+  rememberBy: link
+  feedFormat: rdf
+  fields:
+    authors: 
+      - key: "dc:creator"
+    title:
+      - key: "dc:title"
+    date:
+      - key: "dc:date"
+    doi:
+      - key: "prism:doi"
+    volume:
+      - key: "prism:volume"
+    issue:
+      - key: "prism:number"
+    firstPage:
+      - key: "prism:firstPage"
+    lastPage:
+      - key: "prism:lastPage"
+
+wiley:
+  rememberBy: link
+  feedFormat: rdf
+  fields:
+    authors: 
+      - key: "dc:creator"
+    title:
+      - key: "dc:title"
+    date:
+      - key: "dc:date"
+    doi:
+      - key: "prism:doi"
+    volume:
+      - key: "prism:volume"
+    issue:
+      - key: "prism:number"
+    firstPage:
+      - key: "prism:firstPage"
+    lastPage:
+      - key: "prism:lastPage"
+
+sciencedirect:
+  rememberBy: link
+  feedFormat: rss2
+  fields:
+    authors: 
+      - key: "description"
+        extractWith:
+          expression: "Author\\(s\\): (.*)$"
+    title:
+      - key: "title"
+    date:
+      - key: "description"
+        extractWith:
+          expression: "Publication date:( Available online)? (.*?)Source:"
+          matchNumber: 2
+    doi:
+      - key: "prism:doi"
+    firstPage:
+      - key: "prism:firstPage"
+    lastPage:
+      - key: "prism:lastPage"
+    volume:
+      - key: "prism:volume"
+      - key: "description"
+        extractWith:
+          expression: "Volume ([0-9]+)"
+    issue:
+      - key: "prism:number"
+
+sage:
+  rememberBy: link
+  feedFormat: rdf
+  fields:
+    authors:
+      - key: "dc:creator"
+    title:
+      - key: "dc:title"
+    date:
+      - key: "dc:date"
+    firstPage:
+      - key: "prism:firstPage"
+    lastPage:
+      - key: "prism:lastPage"
+    doi:
+      - key: "prism:doi"
+    volume:
+      - key: "prism:volume"
+    issue:
+      - key: "prism:number"
+
+helv:
+  rememberBy: link
+  feedFormat: rss2
+  fields:
+    authors:
+      - selector: "meta[name='citation_author']"
+        attribute: content
+    title: 
+      - selector: "meta[name='citation_title']"
+        attribute: content
+    date:
+      - selector: "meta[name='citation_publication_date']"
+        attribute: content
+    doi: 
+      - selector: "meta[name='citation_doi']"
+        attribute: content
+    firstPage:
+      - selector: "meta[name='citation_firstpage']"
+        attribute: content
+    lastPage:
+      - selector: "meta[name='citation_lastpage']"
+        attribute: content
+    volume:
+      - selector: "meta[name='citation_volume']"
+        attribute: content
+    issue:
+      - selector: "meta[name='citation_issue']"
+        attribute: content
+
+ingenta:
+  feedFormat: rdf_ingenta
+  rememberBy: link
+  fields:
+    authors:
+      - key: "dc:creator"
+    title:
+      - key: "dc:title"
+    volume:
+      - key: "prism:volume"
+    issue:
+      - key: "prism:number"
+    firstPage:
+      - key: "prism:startingPage"
+    lastPage:
+      - key: "prism:endingPage"
+    doi:
+      - selector: "meta[name='DC.identifier']"
+        attribute: "content"
+        extractWith:
+          expression: "(10\\..*)"
+    date:
+      - selector: "meta[name='DCTERMS.issued']"
+        attribute: "content"
