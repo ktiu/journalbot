@@ -1,22 +1,17 @@
-const post = true
-const save = true
-const log = true
-
-const init = false
-const debug = false
-
-
-const webhookURL = 'https://geocom.uni-frankfurt.de/hooks/qoq1fd678td5bjq85qpjf4a9ye'
-
 const yaml = require('yaml')
 const fs = require('fs')
 const request = require('request')
+const path = require('path')
 const cheerio = require('cheerio')
-const store = require('data-store')({ path: './storage/read.json' })
+
+const configFile = path.join(__dirname, 'config/config.yaml')
+const config = yaml.parse(fs.readFileSync(configFile, 'utf8'))
+
+const store = require('data-store')({ path: path.join(__dirname, 'storage/read.json')})
 const parseString = require('xml2js').parseString;
 
-const formats = yaml.parse(fs.readFileSync('./config/formats.yaml', 'utf8'))
-const journalFile = './config/journals.yaml'
+const formats = yaml.parse(fs.readFileSync(path.join(__dirname, 'config/formats.yaml'), 'utf8'))
+const journalFile = path.join(__dirname, 'config/journals.yaml')
 const journals = yaml.parse(fs.readFileSync(journalFile, 'utf8'))
 
 const AsyncCache = require('async-cache')
@@ -24,14 +19,14 @@ const httpCache = new AsyncCache({
   max: 1000,
   maxAge: 1000 * 60 * 10,
   load: function (key, cb) {
-      if (debug) console.log("Requesting " + key)
+      if (config.debug) console.log("Requesting " + key)
       let j = request.jar()
       request.get({url: key, jar: j}, cb)}})
 
 journals.forEach( journal => {
 
-  if (init && ! journal.init) return
-  if (debug && ! journal.debug) return
+  if (config.init && ! journal.init) return
+  if (config.debug && ! journal.debug) return
   ['name', 'feedURL', 'format'].forEach( p => {
     if (typeof(journal[p]) == 'undefined') {
       console.error("Journal missing " + p)
@@ -63,7 +58,7 @@ journals.forEach( journal => {
       items.filter( item => {
         if (store.has(journal.name)) {
           read = store.get(journal.name)
-          if(!debug && !init) unread = ! read.includes(cleanResult(item[format.rememberBy]))
+          if(!config.debug && !config.init) unread = ! read.includes(cleanResult(item[format.rememberBy]))
         } 
         if (unread && !!item.title) {
           return (!['rezensionen', 'erratum', 'issue information'].includes(cleanResult(item.title).toLowerCase()))
@@ -165,16 +160,16 @@ const processArticle = function(article) {
               "**" + article.link + "**" )
     .concat( publishedLine != '' ? publishedLine : [] )
     .join("\r")
-  if (log) console.log(message)
-  if (post) announceArticle(message)
+  if (config.log) console.log(message)
+  if (config.post) announceArticle(message)
 }
 
 const announceArticle = function(message) {
-  if (debug) message.channels = ['journals-test']
+  if (config.debug) message.channels = ['journals-test']
   message.channels.forEach(channel => {
     request.post({
       headers: { 'content-type' : 'application/json' },
-      url: webhookURL,
+      url: config.webhookURL,
       body: JSON.stringify({
         text     :  message.text,
         channel  :  channel,
@@ -186,7 +181,7 @@ const announceArticle = function(message) {
         console.error("Could not post: " + error)
         return
       }
-      if (save) store.union(message.journal, message.rememberBy)
+      if (config.save) store.union(message.journal, message.rememberBy)
     })
   })
 }
