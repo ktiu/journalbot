@@ -162,6 +162,7 @@ const processArticle = function(article) {
     .join("\r")
   if (config.log) console.log(message)
   if (config.post) announceArticle(message)
+  else if (config.save) store.union(message.journal, message.rememberBy)
 }
 
 const announceArticle = function(message) {
