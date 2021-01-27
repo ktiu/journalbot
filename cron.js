@@ -40,7 +40,7 @@ journals.forEach( journal => {
     let items = []
     parseString(result.body, function (err, feed) {
       if (err) throw err
-      switch (format.feedFormat) {
+      switch (detectFormat(feed)) {
         case 'rdf_ingenta':
           journal.iconURL = journal.iconURL || feed['rdf:RDF'].channel[0].image[0].$['rdf:resource']
           items = feed['rdf:RDF'].item
@@ -185,4 +185,10 @@ const announceArticle = function(message) {
       if (config.save) store.union(message.journal, message.rememberBy)
     })
   })
+}
+
+const detectFormat = function(feed) {
+  if ("rss" in feed) return "rss2"
+  if ("rdf:RDF" in feed) return "rdf"
+  else {throw Error("Could not detect format")}
 }

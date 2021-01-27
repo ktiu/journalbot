@@ -1,8 +1,9 @@
-- name: Geographische Zeitschrift
-  format: ingenta
-  feedURL: https://api.ingentaconnect.com/content/fsv/gz/latest?format=rss
-  channels:
-    - journals-humangeographie-allgemein
+# - name: Geographische Zeitschrift
+#   debug: true
+#   format: ingenta
+#   feedURL: https://api.ingentaconnect.com/content/fsv/gz/latest?format=rss
+#   channels:
+#     - journals-humangeographie-allgemein
 
 - name: Social Anthropology
   format: wiley
