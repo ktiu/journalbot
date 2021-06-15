@@ -72,6 +72,34 @@
     - journals-globaler-suden
     - journals-wirtschaftsgeographie
 
+- name: Postcolonial Studies
+  init: true
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/cpcs20
+  channels:
+    - journals-globaler-suden
+
+- name: Journal of Ethnic and Migration Studies
+  init: true
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/cjms20
+  channels:
+    - journals-migration
+
+- name: Ethnic and Racial Studies
+  init: true
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rers20
+  channels:
+    - journals-migration
+
+- name: Citizenship studies
+  init: true
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/ccst20
+  channels:
+    - journals-migration
+
 - name: African Geographical Review
   format: tandf
   feedURL: https://www.tandfonline.com/feed/rss/rafg20
@@ -83,6 +111,7 @@
   feedURL: https://www.tandfonline.com/feed/rss/rmob20
   channels:
     - journals-mobilitat
+    - journals-migration
 
 - name: Globalizations
   format: tandf

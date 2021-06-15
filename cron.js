@@ -61,7 +61,12 @@ journals.forEach( journal => {
           if(!config.debug && !config.init) unread = ! read.includes(cleanResult(item[format.rememberBy]))
         } 
         if (unread && !!item.title) {
-          return (!['rezensionen', 'erratum', 'issue information'].includes(cleanResult(item.title).toLowerCase()))
+          return (!['rezensionen',
+                    'erratum',
+                    'issue information',
+                    'editorial board',
+                    'corrigendum',
+                    'correction'].includes(cleanResult(item.title).toLowerCase()))
         } else return false
       }).forEach( item => { getArticle(item, journal, format) })
     });
