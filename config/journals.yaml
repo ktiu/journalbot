@@ -138,7 +138,6 @@
   format: sciencedirect
   feedURL: http://rss.sciencedirect.com/publication/science/09666923
   channels:
-    - journals-migration
     - journals-mobilitat
   iconURL: https://ars.els-cdn.com/content/image/X09666923.jpg
 
