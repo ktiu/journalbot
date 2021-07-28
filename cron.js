@@ -24,7 +24,6 @@ const httpCache = new AsyncCache({
       request.get({url: key, jar: j}, cb)}})
 
 journals.forEach( journal => {
-
   if (config.init && ! journal.init) return
   if (config.debug && ! journal.debug) return
   ['name', 'feedURL', 'format'].forEach( p => {
@@ -38,38 +37,42 @@ journals.forEach( journal => {
     let read = []
     let unread = true
     let items = []
-    parseString(result.body, function (err, feed) {
-      if (err) throw err
-      switch (detectFormat(feed)) {
-        case 'rdf_ingenta':
-          journal.iconURL = journal.iconURL || feed['rdf:RDF'].channel[0].image[0].$['rdf:resource']
-          items = feed['rdf:RDF'].item
-          break
-        case 'rdf':
-          journal.iconURL = journal.iconURL || feed['rdf:RDF'].image[0].url
-          items = feed['rdf:RDF'].item
-          break
-        case 'rss2':
-          items = feed.rss.channel[0].item
-          break
-        default:
-          console.error("Undefined feed format: " + format.feedFormat)
-          return }
-      items.filter( item => {
-        if (store.has(journal.name)) {
-          read = store.get(journal.name)
-          if(!config.debug && !config.init) unread = ! read.includes(cleanResult(item[format.rememberBy]))
-        } 
-        if (unread && !!item.title) {
-          return (!['rezensionen',
-                    'erratum',
-                    'issue information',
-                    'editorial board',
-                    'corrigendum',
-                    'correction'].includes(cleanResult(item.title).toLowerCase()))
-        } else return false
-      }).forEach( item => { getArticle(item, journal, format) })
-    });
+    try {
+      parseString(result.body, function (err, feed) {
+        if (err) throw err
+        switch (detectFormat(feed)) {
+          case 'rdf_ingenta':
+            journal.iconURL = journal.iconURL || feed['rdf:RDF'].channel[0].image[0].$['rdf:resource']
+            items = feed['rdf:RDF'].item
+            break
+          case 'rdf':
+            journal.iconURL = journal.iconURL || feed['rdf:RDF'].image[0].url
+            items = feed['rdf:RDF'].item
+            break
+          case 'rss2':
+            items = feed.rss.channel[0].item
+            break
+          default:
+            console.error("Undefined feed format: " + format.feedFormat)
+            return }
+        items.filter( item => {
+          if (store.has(journal.name)) {
+            read = store.get(journal.name)
+            if(!config.debug && !config.init) unread = ! read.includes(cleanResult(item[format.rememberBy]))
+          } 
+          if (unread && !!item.title) {
+            return (!['rezensionen',
+                      'erratum',
+                      'issue information',
+                      'editorial board',
+                      'corrigendum',
+                      'correction'].includes(cleanResult(item.title).toLowerCase()))
+          } else return false
+        }).forEach( item => { getArticle(item, journal, format) })
+      })
+    } catch(err) {
+      console.error("Problem with " + journal.name + ":\n" + err)
+    }
   })
 })
 
@@ -109,7 +112,7 @@ const getArticle = function(item, journal, format) {
                    value : value })})})
       return await x }
     else { throw Error("No valid key or selector for field: " + field) } })
-  
+
   Promise.all(promises)
     .then( results => {
       results.forEach( res => { article[res.key] = res.value })
