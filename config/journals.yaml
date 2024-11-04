@@ -73,28 +73,24 @@
     - journals-wirtschaftsgeographie
 
 - name: Postcolonial Studies
-  init: true
   format: tandf
   feedURL: https://www.tandfonline.com/feed/rss/cpcs20
   channels:
     - journals-globaler-suden
 
 - name: Journal of Ethnic and Migration Studies
-  init: true
   format: tandf
   feedURL: https://www.tandfonline.com/feed/rss/cjms20
   channels:
     - journals-migration
 
 - name: Ethnic and Racial Studies
-  init: true
   format: tandf
   feedURL: https://www.tandfonline.com/feed/rss/rers20
   channels:
     - journals-migration
 
 - name: Citizenship studies
-  init: true
   format: tandf
   feedURL: https://www.tandfonline.com/feed/rss/ccst20
   channels:
@@ -266,6 +262,7 @@
     - journals-politische-geographie
 
 - name: Political Geography
+  debug: true
   format: sciencedirect
   feedURL: 'http://rss.sciencedirect.com/publication/science/09626298'
   channels:
@@ -351,3 +348,115 @@
   feedURL: 'https://www.tandfonline.com/feed/rss/raag21'
   channels:
     - journals-humangeographie-allgemein
+
+- name: Transport Reviews 
+  init: true
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/ttrv20
+  channels:
+    - journals-mobilitat
+
+- name: Transportation Research Part B-Methodological 
+  init: true
+  format: sciencedirect
+  feedURL: https://rss.sciencedirect.com/publication/science/01912615
+  channels:
+    - journals-mobilitat
+
+- name: Transportation Research Part D-Transport and Environment  
+  init: true
+  format: sciencedirect
+  feedURL: https://rss.sciencedirect.com/publication/science/13619209
+  channels:
+    - journals-mobilitat
+
+- name: Transportation Research Part A-Policy and Practice   
+  init: true
+  format: sciencedirect
+  feedURL: https://rss.sciencedirect.com/publication/science/09658564
+  channels:
+    - journals-mobilitat
+
+- name: Transport Policy
+  init: true
+  format: sciencedirect
+  feedURL: https://rss.sciencedirect.com/publication/science/0967070X
+  channels:
+    - journals-mobilitat
+
+- name: Travel Behaviour and Society 
+  init: true
+  format: sciencedirect
+  feedURL: https://rss.sciencedirect.com/publication/science/2214367X
+  channels:
+    - journals-mobilitat
+
+- name: Transportation Research Part F-Traffic Psychology and Behaviour 
+  init: true
+  format: sciencedirect
+  feedURL: https://rss.sciencedirect.com/publication/science/13698478
+  channels:
+    - journals-mobilitat
+
+- name: International Journal of Sustainable Transportation 
+  init: true
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/ujst20
+  channels:
+    - journals-mobilitat
+
+- name: Journal of Transport & Health 
+  init: true
+  format: sciencedirect
+  feedURL: https://rss.sciencedirect.com/publication/science/22141405
+  channels:
+    - journals-mobilitat
+
+- name: Mobilities 
+  init: true
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rmob20
+  channels:
+    - journals-mobilitat
+
+- name: Transportation Research Interdisciplinary Perspectives 
+  init: true
+  format: sciencedirect
+  feedURL: https://rss.sciencedirect.com/publication/science/25901982
+  channels:
+    - journals-mobilitat
+
+- name: Journal of Urban Mobility 
+  init: true
+  format: sciencedirect
+  feedURL: https://rss.sciencedirect.com/publication/science/26670917
+  channels:
+    - journals-mobilitat
+
+- name: Case Studies on Transport Policy  
+  init: true
+  format: sciencedirect
+  feedURL: https://rss.sciencedirect.com/publication/science/2213624X
+  channels:
+    - journals-mobilitat
+
+- name: Applied Mobilities  
+  init: true
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/rapm20
+  channels:
+    - journals-mobilitat
+
+- name: European Transport Studies
+  init: true
+  format: sciencedirect
+  feedURL: https://rss.sciencedirect.com/publication/science/29502985
+  channels:
+    - journals-mobilitat
+
+- name: Sustainable Transport and Livability 
+  init: true
+  format: tandf
+  feedURL: https://www.tandfonline.com/feed/rss/tstl20
+  channels:
+    - journals-mobilitat
